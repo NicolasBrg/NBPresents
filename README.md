@@ -4,7 +4,7 @@ Premium Mod for Forge 1.12.2, very easy to use server gift hunt creation with gr
 *Last Edit Time 29/03/2021*
 
 ## General
-**NBPresents** allows you to create **collections** of present, a collection is made with minecraft decorative heads, which you can customize as you wish. Once created, your collection is displayed in a menu for your players to see how many presents they need to complete the collection. You can set display names, icons, commands to be executed after a player completes the collection and permissions. Each present in a collection can be collected by players with the required permission, and each present can also be renamed in the configuration. 
+**NBPresents** allows you to create **collections** of presents, a collection is made with minecraft decorative heads, which you can customize as you wish. Once created, your collection is displayed in a menu for your players to see how many presents they need to complete the collection. You can set display names, icons, commands to be executed after a player completes the collection and permissions. Each present in a collection can be collected by players with the required permission, and each present can also be renamed in the configuration. 
 
 ## Configuration
 This category explains how to set up and use NBPresents. Please note that you need to have the "Gooeylibs" mod to guarantee security for the inventory menu. If you don't already have it, it will be provided to you.
@@ -21,7 +21,7 @@ Please note that single licenses will only work for a single server. For network
 
 #### Activate my license
 *This process is the same for single licenses as for network licenses.*
-The information used here is fictitious and will not work, it is used as an example.
+The information used here is fictituous and will not work, it is used as an example.
 For our example we will use this information:<br>
 **Server/Network Name**: ``MyAmazingServer``<br>
 **Server/Network Key**: ``AmazServQXCegs1X16``<br>
@@ -36,9 +36,9 @@ Once this is complete, use the command "**/nbplicence Ip**" and send the address
 
 ### Commands information
 The plugin offers to execute commands as rewards. <br>
-There are two types of commands, the one starting with "**/**" which will be executed by the player, and the commands starting with "**!**" which will be executed by the server.<br>
+There are two types of commands, the ones starting with **"/"** which will be executed by the player, and the commands starting with "**!**" which will be executed by the server.<br>
 **For example** <br>
-``/presentkey`` will simulate sending the plugin license check command bu the player. <br>
+``/presentkey`` will simulate sending the plugin license check command by the player.<br>
 ``!give {PLAYER} minecraft:stone 1`` will ask the server to give the player one stone.<br>
 
 ### Configuration files
@@ -245,7 +245,7 @@ Auto-completion is available for all commands. <br>
 
 ##### collection
 ```/collection``` takes no argument and displays an UI with more than 30 preloaded head. <br> 
-Warning: A little lag can be felt at the first run the time to download the collection. <br>
+Warning: A little lag can be felt at the first run due to the time needed to download the collection. <br>
 ![PresentDefaultCollection](https://user-images.githubusercontent.com/30299182/112839436-7f4e4300-909e-11eb-892f-c6c1389ddfa3.png)
 
 #### Player
@@ -263,11 +263,11 @@ Commands available for players, no permissions required.
 ### Setting up a collection
 We want to create a collection named "TestCollection". <br>
 ```/nbp collection create TestCollection``` Create the collection. <br>
-```/collection``` Open example head menu, we choose all head we want. <br><br>
+```/collection``` Open example head menu, we choose all the head we want. <br><br>
 Place presents in the world. <br>
 ```/nbp collection finish``` Save the current collection. <br>
 ```/nbp collection permission TestCollection nbpresents.mysuperpermissionname``` Set the current collection permission to "nbpresents.mysuperpermissionname". <br>
-```/nbp collection rename TestCollection &6A&emaz&aing``` The current collection is now rename ! <br>[Amazing](https://user-images.githubusercontent.com/30299182/112840953-37c8b680-90a0-11eb-91f0-ee3c6e995d17.png) <br>
+```/nbp collection rename TestCollection &6A&emaz&aing``` The current collection is now renamed ! <br>[Amazing](https://user-images.githubusercontent.com/30299182/112840953-37c8b680-90a0-11eb-91f0-ee3c6e995d17.png) <br>
 ```/nbp config save``` We save a last time our collections. <br>
 
 Finally, with the ``/presents`` the players see. <br>
