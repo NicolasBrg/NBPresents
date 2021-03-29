@@ -1,7 +1,7 @@
 # NBPresents - Version 1.3.21.13
 Premium Mod for Forge 1.12.2, very easy to use server gift hunt creation with graphical interface and very advanced customization, compatible with Sponge permissions.
 
-Last Edit Time 29/03/2021
+*Last Edit Time 29/03/2021*
 
 ## General
 **NBPresents** allows you to create **collections** of present, a collection is made with minecraft decorative heads, which you can customize as you wish. Once created, your collection is displayed in a menu for your players to see how many presents they need to complete the collection. You can set display names, icons, commands to be executed after a player completes the collection and permissions. Each present in a collection can be collected by players with the required permission, and each present can also be renamed in the configuration. 
@@ -45,8 +45,8 @@ There are two types of commands, the one starting with "**/**" which will be exe
 The configuration files work in JSON format. In case of error, please read the generated report, the problem is probably due to a wrong format. For more information do not hesitate to consult https://developer.mozilla.org/fr/docs/Learn/JavaScript/Objects/JSON or other sites to understand the format. Do not hesitate to open a ticket on the discord server if you can't fix the problem alone.
 
 #### General.json
-This is the default content of the file.
-```json
+This is the default content of the file.<br>
+```
 {
 	"ServerName": "",                   // Your license name will be saved here, please do not edit this line manually.
 	"LicenceKey": "",                   // Your license key will be saved here, please do not edit this line manually.
@@ -57,7 +57,7 @@ This is the default content of the file.
 
 #### String.json
 This is the default content of the file. All texts and formats used and visible by the player are listed here, as well as aliases are available and listed here. 
-**Warning: The aliases are specific to each feature, these are all used correctly here, if you add aliases not recognized, they will not be replaced as desired.**
+**Warning: The aliases are specific to each feature, these are all used correctly here, if you add aliases not recognized, they will not be replaced as desired.**<br>
 ```json
 {
 	"Message": {
@@ -90,7 +90,7 @@ This is the default content of the file. All texts and formats used and visible 
 This is an example of the Collection used in the default configuration. Please note that for the coordinates, if the values are all set to **"-1"**, it is considered undefined. Therefore you will have to manually delete the initial presents, present only to show the available formats.<br><br>
 **Once you understand how it works you can delete these collections from the in-game commands, avoid doing it from the configuration.**
 <br>
-```json
+```
 {
 	"Present_Collection": {
 		"Christmas": {                                                  // Here is the ID Name of your collection (You can't have the same name twice)
@@ -207,6 +207,7 @@ PlayerData is the file that contains the progress of players, I advise you not t
 
 ### Commands
 Here is a list of commands proposed by NBPresents (excluding aliases)
+
 #### Admin
 
 ##### nbp <config / collection / json>
@@ -221,7 +222,7 @@ Here is a list of commands proposed by NBPresents (excluding aliases)
 ```nbp config print```: Command that displays all the collections currently loaded. <br>
 
 ###### nbp collection <Create / Edit / Finish / Info / Permission / Remove / Rename / Print> 
-Auto-completion is available for all commands.
+Auto-completion is available for all commands. <br>
 ```nbp collection Create <Name>```:  Create a new collection named "Name". <br>
 ```nbp collection Edit <Name>```: Edit the "Name" collection. All presents placed will be linked to this collection.<br>
 ```nbp collection Finish```: Closes the edit mode and saves the collection.. <br>
@@ -243,7 +244,8 @@ Auto-completion is available for all commands.
 ```nbplicence Info```: Displays the status of the license. <br>
 
 ##### collection
-```/collection``` takes no argument and displays an UI with more than 30 preloaded head 
+```/collection``` takes no argument and displays an UI with more than 30 preloaded head. <br> 
+Warning: A little lag can be felt at the first run the time to download the collection. <br>
 ![PresentDefaultCollection](https://user-images.githubusercontent.com/30299182/112839436-7f4e4300-909e-11eb-892f-c6c1389ddfa3.png)
 
 #### Player
@@ -259,16 +261,16 @@ Commands available for players, no permissions required.
 ```/nicolasbrg``` takes no argument. This command is disabled if you have already purchased another of my products. It simply displays my contact information.
 
 ### Setting up a collection
-We want to create a collection named "TestCollection".
+We want to create a collection named "TestCollection". <br>
 ```/nbp collection create TestCollection``` Create the collection. <br>
-```/collection``` Open example head menu, we choose all head we want. <br>
+```/collection``` Open example head menu, we choose all head we want. <br><br>
 Place presents in the world. <br>
 ```/nbp collection finish``` Save the current collection. <br>
 ```/nbp collection permission TestCollection nbpresents.mysuperpermissionname``` Set the current collection permission to "nbpresents.mysuperpermissionname". <br>
-```/nbp collection rename TestCollection &6A&emaz&aing``` The current collection is now rename ! <br>[Amazing](https://user-images.githubusercontent.com/30299182/112840953-37c8b680-90a0-11eb-91f0-ee3c6e995d17.png)
+```/nbp collection rename TestCollection &6A&emaz&aing``` The current collection is now rename ! <br>[Amazing](https://user-images.githubusercontent.com/30299182/112840953-37c8b680-90a0-11eb-91f0-ee3c6e995d17.png) <br>
 ```/nbp config save``` We save a last time our collections. <br>
 
-Finally, with the ``/presents`` the players see.
+Finally, with the ``/presents`` the players see. <br>
 ![Present](https://user-images.githubusercontent.com/30299182/112841422-bf162a00-90a0-11eb-8460-3ccccd5230a9.jpg)
 
 ### Other bonus features
