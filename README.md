@@ -1,7 +1,7 @@
-# NBPresents - Version 1.3.21.13
+# NBPresents - Version 1.3.21.15
 Premium Mod for Forge 1.12.2, very easy to use server gift hunt creation with graphical interface and very advanced customization, compatible with Sponge permissions.
 
-*Last Edit Time 29/03/2021*
+*Last Edit Time 31/03/2021*
 
 ## General
 **NBPresents** allows you to create **collections** of presents, a collection is made with minecraft decorative heads, which you can customize as you wish. Once created, your collection is displayed in a menu for your players to see how many presents they need to complete the collection. You can set display names, icons, commands to be executed after a player completes the collection and permissions. Each present in a collection can be collected by players with the required permission, and each present can also be renamed in the configuration. 
@@ -51,7 +51,10 @@ This is the default content of the file.<br>
 	"ServerName": "",                   // Your license name will be saved here, please do not edit this line manually.
 	"LicenceKey": "",                   // Your license key will be saved here, please do not edit this line manually.
 	"ServerId": 0,                      // This is the license server ID, please do not edit it alone, this is a backup option to act quickly in case of server downtime.
-	"SecondsAutoBackupInterval": 300    // The time in seconds between each automatic save of the players' progress.
+	"SecondsAutoBackupInterval": 300,   // The time in seconds between each automatic save of the players' progress.
+	"DisplayDeveloperHead": true,	    // Shows or hides the developer's head in the present menu.
+	"IgnoreWarning": false,		    // Ignore all warning.
+	"ViewFullError": false		    // Display complete error if an error occured during opening config file.
 }
 ```
 
@@ -81,7 +84,8 @@ This is the default content of the file. All texts and formats used and visible 
 		"CONFIG_SAVED": "&aThe configuration has just been saved",
 		"ITEM_DESCRIPTION_REMAINING": "&aYou found &6{COUNT}&a/&6{TARGET} &aof the gifts in the collection!",
 		"ITEM_DESCRIPTION_COMPLETED": "&2You have completed the collection!",
-		"INVENTORY_NAME": "&2&lNBPresents - NicolasBrg"
+		"INVENTORY_NAME": "&2&lNBPresents - NicolasBrg",
+		"INVENTORY_COLLECTION_NAME": "&6&lCollection &f{NAME}"
 	}
 }
 ```
@@ -106,7 +110,7 @@ This is an example of the Collection used in the default configuration. Please n
 						"Y": -1,
 						"Z": -1
 					},
-					"SpecialCommand": "/say First present for Christmas!"     // Here is a commandthat will be used when a player has found the current present 
+					"SpecialCommand": "/say First present for Christmas!"     // Here is a command that will be used when a player has found the current present 
 				},
 				{
 					"DisplayName": "",
@@ -116,7 +120,10 @@ This is an example of the Collection used in the default configuration. Please n
 						"Y": -1,
 						"Z": -1
 					},
-					"SpecialCommand": "/say Second present for this Christmas!"
+					"SpecialCommand": [		// Here is a list of commands that will be used when a player has found the current present 
+						"!say First command",
+						"!say Other command"
+					]
 				}
 			],
 			"CommandAfterFullCompletion": [                               // Here it's a list of commands that will be executed once the collection is finished by a player.
